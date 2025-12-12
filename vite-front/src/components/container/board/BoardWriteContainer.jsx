@@ -17,7 +17,7 @@ const BoardWriteContainer = () => {
   console.log('Redux에서 가져온 nickName:', nickName);
   console.log('Redux에서 가져온 memberId:', memberId);
 
-  const API_BASE_URL = 'http://localhost:8088/api/board';
+  const API_BASE_URL = 'http://{YOU_BACKEND_URL}/api/board';
 
 
   const { id } = useParams();

@@ -13,8 +13,8 @@ const BoardUpdateContainer = () => {
   const memberId = useSelector(state => state.loginSlice.id);
   const nickName = useSelector(state => state.loginSlice.nickName);
 
-  const API_BASE_URL ='http://localhost:8088/api/board';
-  const IMAGE_BASE_URL = 'http://localhost:8088/upload/';
+  const API_BASE_URL ='http://{YOU_BACKEND_URL}/api/board';
+  const IMAGE_BASE_URL = 'http://{YOU_BACKEND_URL}/upload/';
 
   const { id } = useParams();
 

@@ -17,7 +17,7 @@ const BoardListContainer = () => {
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
 
-  const API_BASE_URL = 'http://localhost:8088/api/board';
+  const API_BASE_URL = 'http://{YOU_BACKEND_URL}/api/board';
 
      // JWT
     const accessToken = useSelector(state => state.jwtSlice.accessToken);
@@ -48,7 +48,7 @@ const BoardListContainer = () => {
      console.log(`[LOG] 페이지 ${page + 1}의 데이터를 요청합니다. 검색 조건: ${subject} / ${search}`);
 
     // this code for BackEnd Controller
-    // const response = await axios.get("http://localhost:8088/api/board");
+    // const response = await axios.get("http://{YOU_BACKEND_URL}/api/board");
     // parameter init
     let params = { 
         page: page,

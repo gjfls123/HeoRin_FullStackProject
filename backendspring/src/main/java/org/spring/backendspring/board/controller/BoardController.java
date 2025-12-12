@@ -30,7 +30,7 @@ import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 
 // RestController is Data Only
-//@CrossOrigin(origins = "http://localhost:3000")
+//@CrossOrigin(origins = "http://{YOU_FRONTEND_URL}")
 @RestController
 @RequestMapping("/api/board")
 @RequiredArgsConstructor
@@ -96,7 +96,7 @@ public class BoardController {
         // return ResponseEntity.ok("DONE");
     }
 
-    // URL: http://localhost:8088/api/board/detail/{id}
+    // URL: http://{YOU_BACKEND_URL}/api/board/detail/{id}
     @GetMapping("/detail/{boardId}")
     public ResponseEntity<BoardDto> getBoardDetail(@PathVariable("boardId") Long boardId) throws IOException {
 

@@ -21,8 +21,8 @@ const ShopNutritionContainer = () => {
 
   const fetchData = async (page) => {
 
-    // const response = await axios.get("http://localhost:8088/api/shop");
-    const response = await axios.get(`http://localhost:8088/api/shop/nutrition?page=${page}`);
+    // const response = await axios.get("http://{YOU_BACKEND_URL}/api/shop");
+    const response = await axios.get(`http://{YOU_BACKEND_URL}/api/shop/nutrition?page=${page}`);
     const data = response.data;
     console.log(`[LOG] 페이지 ${page + 1}의 데이터를 요청합니다.`);
 

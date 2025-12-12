@@ -25,7 +25,7 @@ const ShopMainContainer = () => {
 
   const fetchData = async (page) => {
     const response = await axios.get(
-      `http://localhost:8088/api/shop?page=${page}`
+      `http://{YOU_BACKEND_URL}/api/shop?page=${page}`
     );
     const data = response.data;
     console.log(`[LOG] 페이지 ${page + 1}의 데이터를 요청합니다.`);
@@ -60,7 +60,7 @@ const ShopMainContainer = () => {
   // this one for recently bring 2items
   const fetchRecentData = async () => {
     try {
-      const response = await axios.get("http://localhost:8088/api/shop/recent");
+      const response = await axios.get("http://{YOU_BACKEND_URL}/api/shop/recent");
       setRecentItems(response.data || []);
     } catch (error) {
       console.error("최근상품로드실패", +error);

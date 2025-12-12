@@ -22,7 +22,7 @@ import lombok.RequiredArgsConstructor;
 @RestController
 @RequestMapping("/api/shop")
 @RequiredArgsConstructor
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "http://{YOU_FRONTEND_URL}")
 public class ItemController {
 
     private final ItemService itemService;
@@ -45,7 +45,7 @@ public class ItemController {
 
     }
 
-    // URL: http://localhost:8088/api/shop/detail/{id}
+    // URL: http://{YOU_BACKEND_URL}/api/shop/detail/{id}
     @GetMapping("/detail/{id}")
     public ResponseEntity<?> getBoardDetail(@PathVariable("id") Long id) throws IOException {
 

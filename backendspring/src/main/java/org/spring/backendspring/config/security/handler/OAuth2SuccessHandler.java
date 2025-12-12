@@ -64,7 +64,7 @@ public class OAuth2SuccessHandler implements AuthenticationSuccessHandler {
 
         response.setHeader("Authorization", "Bearer " + accessToken);
         response.setStatus(HttpServletResponse.SC_OK);
-        response.sendRedirect("http://localhost:3000/auth/oauth/success?token=" + accessToken);
+        response.sendRedirect("http://{YOU_FRONTEND_URL}/auth/oauth/success?token=" + accessToken);
         new ObjectMapper().writeValue(response.getWriter(), authResponse);
 
         log.info("---------------------------------------");

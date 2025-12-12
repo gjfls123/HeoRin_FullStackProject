@@ -39,9 +39,9 @@ const BoardDetailContainer = () => {
     const navigate = useNavigate();
 
 
-    const REPLY_BASE_URL = 'http://localhost:8088/api/reply';
-    const API_BASE_URL = 'http://localhost:8088/api/board';
-    // const IMAGE_BASE_URL = 'http://localhost:8088/upload/';
+    const REPLY_BASE_URL = 'http://{YOU_BACKEND_URL}/api/reply';
+    const API_BASE_URL = 'http://{YOU_BACKEND_URL}/api/board';
+    // const IMAGE_BASE_URL = 'http://{YOU_BACKEND_URL}/upload/';
 
 
     const formatDate = (dateString) => {

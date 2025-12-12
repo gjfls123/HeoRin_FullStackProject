@@ -17,7 +17,7 @@ const PaymentApprovalPage = () => {
 
     // 백엔드 승인 API 호출
     axios
-      .get(`http://localhost:8088/api/payments/approval/${paymentId}/${productPrice}/${memberId}`, {
+      .get(`http://{YOU_BACKEND_URL}/api/payments/approval/${paymentId}/${productPrice}/${memberId}`, {
         params: { pg_token: pgToken, productName }
       })
       .then(() => {

@@ -76,7 +76,7 @@ const MyCrewUpdateContainer = () => {
             newImages.forEach(image => formData.append('newImages', image))
             deleteImageName.forEach(name => formData.append('deleteImageName[]', name));
 
-            const response = await axios.put(`http://localhost:8088/api/mycrew/${crewId}/update`,
+            const response = await axios.put(`http://{YOU_BACKEND_URL}/api/mycrew/${crewId}/update`,
                 formData,
                 {
                     headers: {

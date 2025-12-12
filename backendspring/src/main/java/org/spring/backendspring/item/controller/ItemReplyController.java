@@ -32,7 +32,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 @RestController
 @RequestMapping("/api/itemReply")
 @RequiredArgsConstructor
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "http://{YOU_FRONTEND_URL}")
 public class ItemReplyController {
 
     private final ItemService itemService;

@@ -10,7 +10,7 @@ const CrewList = ({children}) => {
 
     const [crewList, setCrewList] = useState([]);
 
-    const API_BASE_URL = 'http://localhost:8088/api/crew';
+    const API_BASE_URL = 'http://{YOU_BACKEND_URL}/api/crew';
 
      // JWT
     const accessToken = useSelector(state => state.jwtSlice.accessToken);

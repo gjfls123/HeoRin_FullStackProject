@@ -69,7 +69,7 @@ public class MyCrewBotService {
         KomoranResult komoranResult = komoran.analyze(komoranGoGoText);
         List<Token> tokens = komoranResult.getTokenList();
 
-        //라우딩키인데 사실 별 의미는 없음 crew.#임 구독을 {crewId}.{memberId}로 해서
+        //라우딩키인데 지금은 의미없음 기능확장 후에는 있음 crew.#임 구독을 {crewId}.{memberId}로 해서
         String routingKey = "crew." + crewId + "." + memberId;
 
         //봇 메시지

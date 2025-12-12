@@ -76,7 +76,7 @@ public class PaymentController {
             paymentService.paymentApproval(pgToken, paymentId, productPrice, productName, memberId);
 
             // 성공 시 프론트의 /payment/success로 redirect
-            String redirectUrl = "http://localhost:3000/payment/success" +
+            String redirectUrl = "http://{YOU_FRONTEND_URL}/payment/success" +
                     "?paymentId=" + paymentId +
                     "&productPrice=" + productPrice +
                     "&memberId=" + memberId +
@@ -87,7 +87,7 @@ public class PaymentController {
                     .build();
         } catch (Exception e) {
             // 실패 시 프론트의 /payment/fail로 redirect
-            String failUrl = "http://localhost:3000/payment/fail?paymentId=" + paymentId;
+            String failUrl = "http://{YOU_FRONTEND_URL}/payment/fail?paymentId=" + paymentId;
             return ResponseEntity.status(HttpStatus.FOUND)
                     .header("Location", failUrl)
                     .build();

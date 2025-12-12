@@ -24,8 +24,8 @@ const ShopAccessoryContainer = () => {
 
   const fetchData = async (page) => {
 
-    // const response = await axios.get("http://localhost:8088/api/shop");
-    const response = await axios.get(`http://localhost:8088/api/shop/accessory?page=${page}`);
+    // const response = await axios.get("http://{YOU_BACKEND_URL}/api/shop");
+    const response = await axios.get(`http://{YOU_BACKEND_URL}/api/shop/accessory?page=${page}`);
     const data = response.data;
     console.log(`[LOG] 페이지 ${page + 1}의 데이터를 요청합니다.`);
 
@@ -93,7 +93,7 @@ const ShopAccessoryContainer = () => {
                 {list.attachFile ? (
                   <div className="item-image-placeholder">
                     <img
-                      src={`http://localhost:8088/api/files/${list.attachFile}`}
+                      src={`http://{YOU_BACKEND_URL}/api/files/${list.attachFile}`}
                       alt={list.itemTitle}
                       className="item-image" />
                   </div>

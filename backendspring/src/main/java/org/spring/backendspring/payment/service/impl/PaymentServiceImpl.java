@@ -40,8 +40,8 @@ import java.util.stream.Collectors;
 @Transactional
 public class PaymentServiceImpl implements PaymentService {
 
-    private static final String KAKAO_AUTH_KEY = "5153d372489b6c481c38dab7bb500441";
-    private static final String KAKAO_CID = "TC0ONETIME";
+    private static final String KAKAO_AUTH_KEY = "{YOU_KAKAO_AUTH_KEY}";
+    private static final String KAKAO_CID = "{YOU_KAKAO_CID}";
 
     private final PaymentRepository paymentRepository;
     private final PaymentResultRepository paymentResultRepository;
@@ -206,7 +206,7 @@ public class PaymentServiceImpl implements PaymentService {
 
             removeCartByMemberId(paymentDto.getMemberId());
 
-            return "http://localhost:3000/payment/success"; 
+            return "http://{YOU_FRONTEND_URL}/payment/success"; 
         }
 
         // 2. 카카오페이 결제 준비 로직 (KAKAO)
@@ -251,12 +251,12 @@ public class PaymentServiceImpl implements PaymentService {
         String encodedItemName = URLEncoder.encode(mainItemName, StandardCharsets.UTF_8);
 
         params.add("approval_url",
-                "http://localhost:8088/api/payments/approval/"
+                "http://{YOU_BACKEND_URL}/api/payments/approval/"
                         + paymentId + "/" + totalAmount + "/" + memberId
                         + "?productName=" + encodedItemName);
 
-        params.add("cancel_url", "http://localhost:3000/payment/cancel");
-        params.add("fail_url", "http://localhost:3000/payment/fail");
+        params.add("cancel_url", "http://{YOU_FRONTEND_URL}/payment/cancel");
+        params.add("fail_url", "http://{YOU_FRONTEND_URL}/payment/fail");
 
         HttpEntity<MultiValueMap<String, String>> entity = new HttpEntity<>(params, headers);
 

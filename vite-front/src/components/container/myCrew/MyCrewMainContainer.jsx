@@ -99,7 +99,7 @@ const MyCrewMainContainer = () => {
               {myCrew.newFileName && myCrew.newFileName.length > 0 && (
                 <div className="myCrewMainImage">
                   <img
-                    // src={`http://localhost:8088/upload/${myCrew.newFileName[0]}`}
+                    // src={`http://{YOU_BACKEND_URL}/upload/${myCrew.newFileName[0]}`}
                     src={myCrew.fileUrl[0]}
                     // src={`${IMAGES_S3_URL}${myCrew.newFileName[0]}`}
                     alt={`${myCrew.name} 이미지`}

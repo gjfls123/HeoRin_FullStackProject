@@ -91,7 +91,7 @@ const MyCrewChatContainer = () => {
 
   useEffect(() => {
     // stomp 연결
-    const socket = new SockJS("http://localhost:8088/ws")
+    const socket = new SockJS("http://{YOU_BACKEND_URL}/ws")
     const stomp = new Client({
       webSocketFactory: () => socket,
       debug: (str) => {console.log(str)},

@@ -33,9 +33,9 @@ const ShopDetailContainer = () => {
   const { id } = useParams();
   const navigate = useNavigate();
 
-  const REPLY_BASE_URL = "http://localhost:8088/api/itemReply";
-  const API_BASE_URL = "http://localhost:8088/api/shop";
-  const IMAGE_BASE_URL = "http://localhost:8088/upload/";
+  const REPLY_BASE_URL = "http://{YOU_BACKEND_URL}/api/itemReply";
+  const API_BASE_URL = "http://{YOU_BACKEND_URL}/api/shop";
+  const IMAGE_BASE_URL = "http://{YOU_BACKEND_URL}/upload/";
   const NO_IMAGE_URL = "/images/noimage.jpg";
 
   const formatDate = (dateString) => {

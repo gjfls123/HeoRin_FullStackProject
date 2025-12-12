@@ -31,7 +31,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 @RestController
 @RequestMapping("/api/reply")
 @RequiredArgsConstructor
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "http://{YOU_FRONTEND_URL}")
 public class BoardReplyController {
 
     private final BoardService boardService;
