@@ -154,8 +154,7 @@ FullStackProject/   <br>
 
 ###  🧩 **DB설계 / 챗봇 / 내크루 전반 (허린)**
 
-<details>
-    <summary>🗄️ DB 설계</summary>
+- 🗄️ DB 설계
         <table>
             <tr>
                 <th>ERD</th>
@@ -171,10 +170,10 @@ FullStackProject/   <br>
                 도메인으로 구성했습니다.</td>
             </tr>
         </table>
-</details>
-<details>
-    <summary>🤖 챗봇</summary>
-        <table>
+  
+ - 🤖 챗봇
+   
+   <table>
             <tr>
                 <th>ChatBot</th>
                 <th>KOMORAN,<br>RabbitMQ(Docker)</th>
@@ -195,9 +194,9 @@ FullStackProject/   <br>
                 </td>
             </tr>
         </table>
-</details>
-<details>
-    <summary>🏃‍♂️ 내 크루 전반 </summary>
+
+
+- 🏃‍♂️ 내 크루 전반
         <table>
             <tr>
               <td>Main</td>
@@ -220,7 +219,6 @@ FullStackProject/   <br>
               </td>
             </tr>
         </table>
-</details>
 
 <br/>
 
